@@ -8,5 +8,6 @@ class SongsController < ApplicationController
   end
 
   def show
+    @song = RSpotify::Track.find(params[:id])
   end
 end
