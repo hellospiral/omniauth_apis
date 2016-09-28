@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem "animate-rails"
 gem "chartkick"
 gem 'devise'
+gem 'rspotify'
 
 group :development, :test do
   gem 'byebug', platform: :mri
