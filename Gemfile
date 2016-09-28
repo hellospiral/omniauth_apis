@@ -14,6 +14,8 @@ gem "animate-rails"
 gem "chartkick"
 gem 'devise'
 gem 'rspotify'
+gem 'dotenv-rails'
+gem "omniauth-google-oauth2"
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Google +
+
+Client id: 853941540820-4o4i23gpfgk0maf2gu0l0a982nud0cuk.apps.googleusercontent.com
+Client secret: LAlQ-8dmdr6MIg3NVrRcHssa
