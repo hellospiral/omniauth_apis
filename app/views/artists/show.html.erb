@@ -6,11 +6,11 @@
  <ul>
    <% album.tracks.each do |track| %>
      <li>
-       <%= track.name %>
+       <%= link_to track.name, song_path(track.id) %>
      </li>
    <% end %>
  </ul>
 <% end %>
 
-Total Hours: 
+Total Hours:
 <%= @artist.albums(country: 'US').map { |album| album.tracks }.flatten.inject(0) { |sum, track| sum + track.duration_ms } / 1000 / 60 / 60 %>
