@@ -10,11 +10,24 @@ class User < ApplicationRecord
     end
   end
 
+
   def self.new_with_session(params, session)
     super.tap do |user|
-      if data = session["devise.google_oauth2_data"] && session["devise.google_oauth2_data"]["extra"]["raw_info"] || session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+      if data = session["devise.google_oauth2_data"] && session["devise.google_oauth2_data"]["extra"]["raw_info"] || session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"] ||
+      session["devise.twitter_data"]  
         user.email = data["email"] if user.email.blank?
       end
     end
   end
 end
+
+# def self.new_with_session(params, session)
+#   if session['devise.user_attributes']
+#     new(session['devise.user_attributes'], without_protection: true) do |user|
+#       user.attributes = params
+#       user.valid?
+#     end
+#   else
+#     super
+#   end
+# end
