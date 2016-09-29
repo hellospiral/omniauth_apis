@@ -17,6 +17,7 @@ source 'https://rubygems.org'
   gem 'dotenv-rails'
   gem "omniauth-google-oauth2"
   gem 'omniauth-facebook'
+  gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'byebug', platform: :mri
