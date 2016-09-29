@@ -17,10 +17,10 @@
 
 
 google.books.load();
-
 function initialize() {
-  var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
-  viewer.load('ISBN:0738531367');
+  var viewer1 = new google.books.DefaultViewer(document.getElementById('viewerCanvas1'));
+  viewer1.load('ISBN:0141908351');
+  var viewer2 = new google.books.DefaultViewer(document.getElementById('viewerCanvas2'));
+  viewer2.load('ISBN:0679420290');
 }
-
 google.books.setOnLoadCallback(initialize);
